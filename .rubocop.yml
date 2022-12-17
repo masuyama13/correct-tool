@@ -1,0 +1,15 @@
+require:
+  - rubocop-performance
+  - rubocop-rails
+  - rubocop-rspec
+
+AllCops:
+  TargetRubyVersion: 3.1
+  Exclude:
+    - 'bin/**/*'
+    - 'vendor/**/*'
+    - 'node_modules/**/*'
+
+# 常にダブルクォートの方がいい
+Style/StringLiterals:
+  EnforcedStyle: double_quotes

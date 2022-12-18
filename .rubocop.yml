@@ -10,6 +10,10 @@ AllCops:
     - 'vendor/**/*'
     - 'node_modules/**/*'
 
+# 今のところ必要性を感じない
+Style/Documentation:
+  Enabled: false
+
 # 常にダブルクォートの方がいい
 Style/StringLiterals:
   EnforcedStyle: double_quotes

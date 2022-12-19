@@ -1,11 +1,11 @@
-require 'rails_helper'
+require "rails_helper"
 
 RSpec.describe "articles/show", type: :view do
-  before(:each) do
+  before do
     assign(:article, Article.create!(
-      title: "Title",
-      body: "MyText"
-    ))
+                       title: "Title",
+                       body: "MyText"
+                     ))
   end
 
   it "renders attributes in <p>" do

@@ -1,4 +1,4 @@
-require 'rails_helper'
+require "rails_helper"
 
 RSpec.describe "articles/edit", type: :view do
   let(:article) {
@@ -8,7 +8,7 @@ RSpec.describe "articles/edit", type: :view do
     )
   }
 
-  before(:each) do
+  before do
     assign(:article, article)
   end
 
@@ -16,7 +16,6 @@ RSpec.describe "articles/edit", type: :view do
     render
 
     assert_select "form[action=?][method=?]", article_path(article), "post" do
-
       assert_select "input[name=?]", "article[title]"
 
       assert_select "textarea[name=?]", "article[body]"

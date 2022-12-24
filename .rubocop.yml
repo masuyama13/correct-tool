@@ -10,6 +10,12 @@ AllCops:
     - 'vendor/**/*'
     - 'node_modules/**/*'
 
+# テストでは{}を使いたい
+Style/BlockDelimiters:
+  Enabled: true
+  Exclude:
+    - "spec/**/*_spec.rb"
+
 # 今のところ必要性を感じない
 Style/Documentation:
   Enabled: false
@@ -17,3 +23,7 @@ Style/Documentation:
 # 常にダブルクォートの方がいい
 Style/StringLiterals:
   EnforcedStyle: double_quotes
+
+# 5よりは大きくしない
+RSpec/MultipleExpectations:
+  Max: 2
